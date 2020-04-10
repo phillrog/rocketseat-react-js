@@ -3,6 +3,8 @@ import api from '../../services/api';
 
 import './styles.css';
 
+import { Link } from 'react-router-dom';
+
 export default class Main extends Component {
     state = {
         products: [],
@@ -24,7 +26,7 @@ export default class Main extends Component {
                         <strong>{product.title}</strong>
                         <p>{product.description}</p>
 
-                        <a href={product.url}>Acessar</a>
+                        <Link to={`/products/${product._id}`}>Acessar</Link>
 
                     </article>                    
                     
